@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/imageLoading"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/bid_post_Image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Last Bid : -"
+                android:id="@+id/tvLastBid"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/tvRS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@id/tvLastBid"
+                android:text="RS."
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/lastbid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/tvRS"
+                android:textSize="25dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/bidamount"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="35dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Enter Bid amount"
+                android:textColor="@color/colorBlack"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:inputType="number">
+                <requestFocus/>
+            </EditText>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BID"
+                android:id="@+id/btnbid"
+                android:onClick="bidBtnClicked"
+                android:background="@drawable/button_background"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bid_post_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="30dp" />
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bid_description"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp"
+            android:fontFamily="serif-monospace"
+            app:trimExpandedText="more"
+            app:trimCollapsedText="less"
+            app:trimMode="trimModeLength"
+            app:trimLength="60"/>
+
+    </LinearLayout>
+</ScrollView>
