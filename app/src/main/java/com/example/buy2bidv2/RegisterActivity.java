@@ -114,8 +114,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-                        } else
-                        {
+                        } else {
                             pd.dismiss();
                             Toast.makeText(RegisterActivity.this, "you can't register with this email and password!", Toast.LENGTH_SHORT).show();
                         }

@@ -79,14 +79,13 @@ public class PostActivity extends AppCompatActivity {
                                 if(dayOfMonth<10)
                                 {
                                     tempDay = "0"+dayOfMonth;
-
-
+                                } else {
+                                    tempDay = ""+dayOfMonth;
                                 }
                                 if((monthOfYear+1)<10)
                                 {
                                     tempMonth = "0"+(monthOfYear+1);
-                                }
-                                else
+                                } else
                                 {
                                     tempMonth = String.valueOf((monthOfYear+1));
                                 }
